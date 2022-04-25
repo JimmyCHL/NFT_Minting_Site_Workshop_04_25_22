@@ -1,38 +1,145 @@
+.main {
+    height: 55vh;
+    min-height: 300px;
+    width: 80%;
+    min-width: 870px;
+    max-width: 1150px;
+    display: flex;
+    flex-direction: column;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
 .App {
-  text-align: center;
+    min-height: 100vh;
+    min-width: max-content;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.content {
+    flex: 1;
+    display: flex;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.footer {
+    height: 30px;
+    line-height: 16px;
+    background-color: rgba(31, 31, 230, 0.585);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.background-video {
+    position: fixed;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1;
+    opacity: 0.8;
 }
 
-.App-link {
-  color: #61dafb;
+.nft-container {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(0, 0, 0, 0.785);
+    padding: 0 20px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.nft-image {
+    width: 60%;
+    height: 80%;
+    object-fit: cover;
+    border-radius: 10px;
+    box-shadow: 1px 1px 10px 3px white;
+}
+
+.description {
+    box-sizing: border-box;
+    padding: 0 20px;
+    background-color: transparent;
+    flex: 1;
+    color: white;
+    font-size: 24px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 20px;
+    position: relative;
+}
+
+.decoration-video {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1;
+    opacity: 0.8;
+}
+
+.heading {
+    font-size: 28px;
+    font-weight: 400;
+    text-shadow: 2px 2px 4px black;
+}
+
+.info-text {
+    font-size: 18px;
+    font-weight: bold;
+    color: black;
+    opacity: 1;
+}
+
+.actions {
+    display: flex;
+    gap: 20px;
+}
+
+.filled-button {
+    background-color: white;
+    border: none;
+    padding: 15px 40px;
+    border-radius: 30px;
+    text-transform: uppercase;
+    cursor: pointer;
+    font-weight: bold;
+    transition: all 0.2s ease-in-out;
+}
+
+.filled-button:hover {
+    background-color: #333;
+    color: white;
+}
+
+.transparent-button {
+    background-color: black;
+    border: solid 1px white;
+    color: white;
+    padding: 15px 40px;
+    border-radius: 30px;
+    text-transform: uppercase;
+    cursor: pointer;
+    font-weight: bold;
+    transition: all 0.2s ease-in-out;
+}
+
+.transparent-button:hover {
+    background-color: #333;
+    color: black;
+}
+
+.spinner {
+    fill: rgb(255, 255, 255);
+    height: 34px;
+    width: 64px;
+    position: relative;
+    top: -17px;
 }
